@@ -41,9 +41,9 @@ class RenderReview extends React.Component<stateProps, ownProps> {
     renderOptions = (element: Review) => {
         return(
             <div style={{cursor: "pointer"}}>
-                <span key="delete" onClick={() => this.handleDelete(element)}><Tooltip title="Delete"><DeleteFilled style={{fontSize: 20}}/></Tooltip></span>
+                <span className="delete" onClick={() => this.handleDelete(element)}><DeleteFilled style={{fontSize: 20}}/></span>
                 <span>{" "}</span>
-                <span key="edit" onClick={() => this.handleEdit(element)}><Tooltip title="Edit"><EditFilled style={{fontSize: 20}}/></Tooltip></span>
+                <span className="edit" onClick={() => this.handleEdit(element)}><EditFilled style={{fontSize: 20}}/></span>
             </div>
         )
     }
@@ -78,8 +78,8 @@ class RenderReview extends React.Component<stateProps, ownProps> {
                                 <h1>
                                     Enter Review:
                                 </h1>
-                                <TextArea rows={4} onChange={this.handleChange} value={this.state.reviewInput} placeholder={"Write a review..."}/>
-                                <Button style={{marginTop: 10, width: "150px", marginBottom: 50}} onClick={this.handleSubmit}>Submit</Button>
+                                <TextArea className="edit-text" rows={4} onChange={this.handleChange} value={this.state.reviewInput} placeholder={"Write a review..."}/>
+                                <Button className="submit-button" style={{marginTop: 10, width: "150px", marginBottom: 50}} onClick={this.handleSubmit}>Submit</Button>
                             </Col>
                         </Row>
                     </div>

@@ -8,13 +8,12 @@ interface Props {
 
 const UtilReview: React.FC<Props> =  ({reviewElement, renderOptions}) => {
     return(
-        <div key={reviewElement.id}>
+        <div className={reviewElement.id}>
                 {reviewElement.user} {reviewElement.timestamp}
                 {renderOptions}
                 <h1>
                     {reviewElement.review}
-                </h1>
-            
+                </h1>   
         </div>
     )
 }
